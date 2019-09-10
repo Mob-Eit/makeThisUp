@@ -1,37 +1,36 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import QueryForm from './Components/QueryForm/QueryForm';
 
 class App extends Component{
   constructor(){
     super();
     this.state = {
+      apiData:[],
 
     }
   }
   
   getData = (params) =>{
     const MAKEUP_API_URL = 'http://makeup-api.herokuapp.com/api/v1/products.json';
-    const apiParams = {params:{
-      product_type: 'blush',
-      price_greater_than: '50',
-      price_greater_than: '50',
-
-    }}
-    axios.get(MAKEUP_API_URL, apiParams)
+    axios.get(MAKEUP_API_URL, params)
     .then( res =>{
-      console.log(res);
+      const apiData = res.data;
+      this.setState({apiData});
     })
   }
 
-  componentDidMount(){
-    this.getData();
+  componentDidMount(){ 
   }
+
   render(){
     
     return (
       <div className="App">
-        
+        <QueryForm 
+          getData={this.getData}
+        />
       </div>
     );
   }
