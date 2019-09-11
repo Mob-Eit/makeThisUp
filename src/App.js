@@ -4,6 +4,7 @@ import QueryForm from './Components/QueryForm/QueryForm';
 import Results from './Components/ResultsFolder/Results';
 import './App.css';
 
+
 class App extends Component{
   constructor(){
     super();
