@@ -8,8 +8,7 @@ class SingleProductCard extends Component {
     render() {
         
     // call data!
-    
-        const{productImage, productName, productPrice, productColourArray} = this.props;
+        const{productImage, productName, productPrice, productColourArray} = this.props.data;
 
         return (
             <section className="singleProductSection">

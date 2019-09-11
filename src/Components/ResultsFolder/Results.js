@@ -10,6 +10,7 @@ class Results extends Component {
     // callfunction with data
     renderCards = (array) => {
         array.map(element => {
+            console.log(`mapped array`);
             return(
             <SingleProductCard
             productImage={element.image_link}
@@ -25,7 +26,7 @@ class Results extends Component {
     render() { 
         return (
             <div className="resultsContainer">
-                <SingleProductCard/>
+                {this.renderCards(this.props.data)}
             </div>
             );
     }

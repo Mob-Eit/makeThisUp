@@ -17,8 +17,12 @@ class App extends Component{
     const MAKEUP_API_URL = 'http://makeup-api.herokuapp.com/api/v1/products.json';
     axios.get(MAKEUP_API_URL, params)
     .then( res =>{
-      const apiData = res.data;
-      this.setState({apiData});
+      console.log(res);
+        const apiData = res.data;
+        this.setState({apiData});
+        if (!res.data.length) {
+          alert('check your price sliders')
+        }
     })
   }
 
