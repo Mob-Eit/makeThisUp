@@ -7,7 +7,7 @@ class LikeButton extends Component {
         super(props);
         this.state = { 
             pressed:false
-         }
+        }
     }
 
     likeFirebase = () => {
