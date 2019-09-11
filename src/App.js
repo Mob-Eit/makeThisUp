@@ -3,6 +3,7 @@ import axios from 'axios';
 import QueryForm from './Components/QueryForm/QueryForm';
 import Results from './Components/ResultsFolder/Results';
 import './App.css';
+import FavouritesList from './Components/FavouritesFolder/FavoritesList';
 
 
 class App extends Component{
@@ -38,6 +39,7 @@ class App extends Component{
           getData={this.getData}
         />
         <Results data={this.state.apiData}/>
+        <FavouritesList />
       </div>
     );
   }
