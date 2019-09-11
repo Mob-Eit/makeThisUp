@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './App.css';
 import QueryForm from './Components/QueryForm/QueryForm';
+import Results from './Components/ResultsFolder/Results';
+import './App.css';
 
 class App extends Component{
   constructor(){
@@ -31,6 +32,7 @@ class App extends Component{
         <QueryForm 
           getData={this.getData}
         />
+        <Results data={this.state.apiData}/>
       </div>
     );
   }
