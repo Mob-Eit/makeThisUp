@@ -7,19 +7,21 @@ class SingleProductCard extends Component {
     }
     render() {
         
-    // call data!
-        const{productImage, productName, productPrice, productColourArray} = this.props.data;
+        // const{productImage, productName, productPrice, productColourArray} = this.props.data;
+        // call data!
+
+        const {data} = this.props
 
         return (
             <section className="singleProductSection">
                 <div className="singleContainer">
                    <ul>
                        <li>
-                           <img src={productImage} alt=""/>
-                           <h2>{productName}</h2>
-                           <h3>{productPrice}</h3>
+                           <img src={data.image_link} alt=""/>
+                           <h2>{data.name}</h2>
+                           <h3>{data.price}</h3>
                            <div className="colorPalette">
-                                <p>{productColourArray}</p>
+                                {/* <p>{data.product_colors}</p> */}
                            </div>
                        </li>
                        

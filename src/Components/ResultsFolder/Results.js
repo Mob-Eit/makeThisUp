@@ -8,27 +8,34 @@ class Results extends Component {
     }
 
     // callfunction with data
-    renderCards = (array) => {
-        array.map(element => {
-            console.log(`mapped array`);
-            return(
-            <SingleProductCard
-            productImage={element.image_link}
-            productName={element.name}
-            productPrice={element.price}
-            productColourArray={element.product_colors}
-            />
-            )
-        })
-    }
-
+    // renderCards = (array) => {
+    //     array.map(element => {
+    //         console.log(`mapped array`);
+    //         return(
+    //         <SingleProductCard
+    //         productImage={element.image_link}
+    //         productName={element.name}
+    //         productPrice={element.price}
+    //         productColourArray={element.product_colors}
+    //         />
+    //         )
+    //     })
+    // }
 
     render() { 
+        const {data} = this.props
         return (
             <div className="resultsContainer">
-                {this.renderCards(this.props.data)}
+                {/* {this.renderCards(this.props.data)} */}
+                {data.map(element => {
+                    return(
+                        <SingleProductCard 
+                            data={element}
+                        />
+                    )
+                })}
             </div>
-            );
+        );
     }
 }
  
