@@ -7,21 +7,6 @@ class Results extends Component {
         this.state = {  }
     }
 
-    // callfunction with data
-    // renderCards = (array) => {
-    //     array.map(element => {
-    //         console.log(`mapped array`);
-    //         return(
-    //         <SingleProductCard
-    //         productImage={element.image_link}
-    //         productName={element.name}
-    //         productPrice={element.price}
-    //         productColourArray={element.product_colors}
-    //         />
-    //         )
-    //     })
-    // }
-
     render() { 
         const {data} = this.props
         return (
