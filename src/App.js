@@ -40,7 +40,7 @@ class App extends Component{
           getData={this.getData}
         />
         <Results data={this.state.apiData}/>
-        <FavouritesList />
+        {/* <FavouritesList /> */}
         <SwipeableTemporaryDrawer />
       </div>
     );
