@@ -4,6 +4,7 @@ import QueryForm from './Components/QueryForm/QueryForm';
 import Results from './Components/ResultsFolder/Results';
 import './App.css';
 import FavouritesList from './Components/FavouritesFolder/FavoritesList';
+import SwipeableTemporaryDrawer from './Components/Drawer/Drawer.js';
 
 
 class App extends Component{
@@ -40,6 +41,7 @@ class App extends Component{
         />
         <Results data={this.state.apiData}/>
         <FavouritesList />
+        <SwipeableTemporaryDrawer />
       </div>
     );
   }
