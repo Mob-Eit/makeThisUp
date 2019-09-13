@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import QueryForm from './Components/QueryForm/QueryForm';
 import Results from './Components/ResultsFolder/Results';
-import './App.css';
+import './globalStyles/App.scss';
 import SwipeableTemporaryDrawer from './Components/Drawer/Drawer.js';
 import firebase from 'firebase';
-
 
 class App extends Component{
   constructor(){

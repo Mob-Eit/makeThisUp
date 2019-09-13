@@ -1,0 +1,37 @@
+@import './variablesNMixins.scss';
+
+html {
+    font-size: 120%;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2 {
+    font-family: $headerFont;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+    font-family: $baseFont;
+}
+
+button {
+    font-family: $baseFont;
+}
+
+.wrapper {
+    width: 98%;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
