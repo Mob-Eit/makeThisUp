@@ -7,6 +7,7 @@ class QueryForm extends Component{
             type: '',
             maxPrice: '',
             minPrice: '',
+            attr:false,
         }
     }
 
@@ -16,13 +17,27 @@ class QueryForm extends Component{
 
     handleSubmit = (event) =>{
         event.preventDefault();
-        console.log('prevented');
-        const params = {params:{
-            product_type:this.state.type,
-            price_greater_than:this.state.minPrice,
-            price_less_than:this.state.maxPrice,
-        }};
-        this.props.getData(params);
+
+        if(!this.state.type){
+            
+
+            this.setState({
+                attr:true
+            })
+
+        }else{
+            const params = {params:{
+                product_type:this.state.type,
+                price_greater_than:this.state.minPrice,
+                price_less_than:this.state.maxPrice,
+            }};
+            this.props.getData(params);
+            
+            this.setState({
+                attr:false
+            })
+        }
+
     }
 
     render(){
@@ -30,7 +45,9 @@ class QueryForm extends Component{
         return(
             <div>
                 <form action="">
-                <select id='type' onChange={this.handleChange}>
+
+                    {this.state.attr ? <label htmlFor="type">please select one category</label>:true}
+                <select name="type" id='type' onChange={this.handleChange}>
                     <option disabled selected value>Select your shit</option>
                     <option value="blush">Blush</option>
                     <option value="bronzer">Bronzer</option>
