@@ -4,14 +4,15 @@ div.singleContainer {
     background: #f1f0fc;
     color: #6056f9;
     border: .25rem solid #cfff31;
-    padding: 1rem 2rem;
+    padding: 1.5rem;
     border-radius: .25rem;
     position: relative;
     h3 {
         font-style: italic;
     }
-    div {
+    div.likeButtonContainer {
         text-align: right;
+        height: 0;
         button {
             position: relative;
             top: 4rem;
