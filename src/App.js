@@ -12,8 +12,27 @@ class App extends Component{
     super();
     this.state = {
       apiData:[],
+      favedItems:[],
 
     }
+  }
+
+  isLiked = (id) => {
+    const clonedFavedItems = [...this.state.favedItems];
+    clonedFavedItems.push(id);
+    this.setState({
+      favedItems:clonedFavedItems,
+    })
+  }
+
+  isUnliked = (id) =>{
+    const clonedFavedItems = [...this.state.favedItems];
+    const filteredFavedItems = clonedFavedItems.filter( value => {
+      return value !== id;
+    });
+    this.setState({
+      favedItems:filteredFavedItems,
+    });
   }
   
   getData = (params) =>{
@@ -39,9 +58,16 @@ class App extends Component{
         <QueryForm 
           getData={this.getData}
         />
-        <Results data={this.state.apiData}/>
+        <Results 
+          data={this.state.apiData}
+          isLiked={this.isLiked}
+          favedItems={this.state.favedItems}
+        />
         {/* <FavouritesList /> */}
-        <SwipeableTemporaryDrawer />
+        <SwipeableTemporaryDrawer 
+          favedItems={this.state.favedItems}
+          isUnliked={this.isUnliked}
+        />
       </div>
     );
   }

@@ -16,6 +16,8 @@ class Results extends Component {
                     return(
                         <SingleProductCard 
                             data={element}
+                            isLiked={this.props.isLiked}
+                            favedItems={this.props.favedItems}
                         />
                     )
                 })}

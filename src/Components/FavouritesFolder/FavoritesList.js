@@ -43,7 +43,10 @@ class FavouritesList extends Component {
                             <li>{item.itemDetails.name}</li>
                             <li>{item.itemDetails.price}</li>
                             <RemoveButton 
-                            item={item.id}
+                                item={item.id}
+                                favedItems={this.props.favedItems}
+                                id={item.itemDetails.id}
+                                isUnliked={this.props.isUnliked}
                             />
                         </ul>
                     )
