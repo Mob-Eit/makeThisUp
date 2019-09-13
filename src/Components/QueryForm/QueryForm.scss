@@ -1,0 +1,47 @@
+// COLORS
+$light: #f1f0fc;
+$primary:  #6056f9;
+$accent: #cfff31;
+
+// FONTS
+$headerFont: 'Josefin Slab', serif;
+$baseFont: 'Lato', sans-serif;
+
+.formContainer, 
+.slider, 
+.searchButton, 
+#type {
+    font-family: $baseFont;
+    border: 2px solid $primary; 
+    border-radius: 15px;
+    padding: 2rem;
+    p{
+        color: $primary;
+        font-size: 2rem; 
+    }
+}
+
+.searchButton, 
+#type {
+    font-size: 1rem; 
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1rem;
+}
+
+.searchButton {
+    background: $primary;
+    color: white; 
+    margin: 2rem 0; 
+    &:hover, 
+    &:focus, 
+    &:active {
+        border: 2px solid $primary; 
+        background: $accent;
+        color: $primary; 
+    }
+}
+
+.categoryErrorMessage {
+    color: red; 
+}
