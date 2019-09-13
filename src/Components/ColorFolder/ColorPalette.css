@@ -1,0 +1,11 @@
+.colorPalette {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+.colorPalette ul li {
+  display: inline-block;
+}
+/*# sourceMappingURL=ColorPalette.css.map */
