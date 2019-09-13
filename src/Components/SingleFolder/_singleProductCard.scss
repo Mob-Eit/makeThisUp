@@ -1,0 +1,21 @@
+div.singleContainer {
+    width: 90%;
+    margin: 1rem auto 0;
+    background: #f1f0fc;
+    color: #6056f9;
+    border: .25rem solid #cfff31;
+    padding: 1rem 2rem;
+    border-radius: .25rem;
+    position: relative;
+    h3 {
+        font-style: italic;
+    }
+    div {
+        text-align: right;
+        button {
+            position: relative;
+            top: 4rem;
+            right: .5rem;
+        }
+    }
+}

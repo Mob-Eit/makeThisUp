@@ -66,8 +66,6 @@ class LikeButton extends Component {
         return (
             <div>
                 {this.state.pressed?<button disabled onClick={this.likeFirebase}>like me!</button>:<button onClick={this.likeFirebase}>like me!</button>}
-                {/* // <button onClick={this.likeFirebase}>like me!</button> */}
-                
             </div>
         );
     }
