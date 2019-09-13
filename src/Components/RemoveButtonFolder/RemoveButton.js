@@ -9,8 +9,13 @@ class RemoveButton extends Component {
 
     removeFirebase = (itemId) => {
         const dbRef = firebase.database().ref();
-
+        const {favedItems, id} = this.props;
         dbRef.child(itemId).remove();
+        favedItems.forEach(item => {
+            if (item === id ){
+                this.props.isUnliked(id);
+            }
+        })
     }
 
 

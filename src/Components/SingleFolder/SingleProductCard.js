@@ -23,7 +23,11 @@ class SingleProductCard extends Component {
                             <div className="colorPalette">
                                 <ColorPalette colorArray={data.product_colors}/>
                             </div>
-                            <LikeButton data={data}/>
+                            <LikeButton 
+                                data={data}
+                                isLiked={this.props.isLiked}
+                                favedItems={this.props.favedItems}
+                            />
                         </li>
                     </ul>
                 </div>
