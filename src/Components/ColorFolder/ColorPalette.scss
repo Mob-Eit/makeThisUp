@@ -1,10 +1,13 @@
 
 .colorPalette{
     display:flex;
-    width:50%;
+    width:25%;
+    overflow-y: hidden;
+    height:30px;
     ul{
         li{
             display: inline-block;
+            margin:2px;
         }
     }
 }

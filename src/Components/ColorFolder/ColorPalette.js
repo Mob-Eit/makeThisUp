@@ -33,8 +33,8 @@ function ColorPalette (props) {
             {reducedArray.map(color => {
                 const ColorBox = styled.div`
                     background:${color};
-                    width:30px;
-                    height:30px;
+                    width:25px;
+                    height:25px;
                     border:1px solid black;
                     border-radius:50%;
                 `
@@ -44,7 +44,7 @@ function ColorPalette (props) {
                     </li>
                 );
             })}
-
+            
         </ul>
     )
 }
