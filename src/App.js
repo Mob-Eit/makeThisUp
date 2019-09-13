@@ -5,6 +5,7 @@ import Results from './Components/ResultsFolder/Results';
 import './App.css';
 import FavouritesList from './Components/FavouritesFolder/FavoritesList';
 import SwipeableTemporaryDrawer from './Components/Drawer/Drawer.js';
+import firebase from 'firebase';
 
 
 class App extends Component{
@@ -15,6 +16,27 @@ class App extends Component{
       favedItems:[],
 
     }
+  }
+
+  componentDidMount() {
+    const dbRef = firebase.database().ref()
+
+    dbRef.on('value', (response) => {
+      const pulledFaves = [];
+
+      const data = response.val();
+
+      for (let key in data) {
+        pulledFaves.push(
+          data[key].id
+        );
+        
+      }
+
+      this.setState({
+        favedItems: pulledFaves
+      });
+    });
   }
 
   isLiked = (id) => {
@@ -46,9 +68,6 @@ class App extends Component{
           alert('check your price sliders')
         }
     })
-  }
-
-  componentDidMount(){ 
   }
 
   render(){
