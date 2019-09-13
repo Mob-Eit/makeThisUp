@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import firebase from "../FirebaseFolder/firebase";
 
-
 class LikeButton extends Component {
     constructor(props) {
         super(props);
@@ -63,11 +62,6 @@ class LikeButton extends Component {
         }
     }
 
-
-    // seeRemove() => {
-    //  if remove button is clicked, enable heart button again
-    // }
-
     render(props) { 
         return (
             <div>
@@ -75,7 +69,7 @@ class LikeButton extends Component {
                 {/* // <button onClick={this.likeFirebase}>like me!</button> */}
                 
             </div>
-         );
+        );
     }
 }
  

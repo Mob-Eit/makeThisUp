@@ -3,7 +3,6 @@ import axios from 'axios';
 import QueryForm from './Components/QueryForm/QueryForm';
 import Results from './Components/ResultsFolder/Results';
 import './App.css';
-import FavouritesList from './Components/FavouritesFolder/FavoritesList';
 import SwipeableTemporaryDrawer from './Components/Drawer/Drawer.js';
 import firebase from 'firebase';
 
@@ -82,7 +81,6 @@ class App extends Component{
           isLiked={this.isLiked}
           favedItems={this.state.favedItems}
         />
-        {/* <FavouritesList /> */}
         <SwipeableTemporaryDrawer 
           favedItems={this.state.favedItems}
           isUnliked={this.isUnliked}

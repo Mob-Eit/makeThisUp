@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import RangeSlider from './Slider.js'
+// import { array } from '../../../../../../../../Library/Caches/typescript/3.6/node_modules/@types/prop-types/index.js';
 
 class QueryForm extends Component{
     constructor(){
@@ -13,6 +15,13 @@ class QueryForm extends Component{
 
     handleChange = (event) => {
         this.setState({[event.target.id]: event.target.value});
+    }
+
+    getMinMax = (array) => {
+        this.setState({
+            minPrice: array[0],
+            maxPrice: array[1]
+        });
     }
 
     handleSubmit = (event) =>{
@@ -40,6 +49,7 @@ class QueryForm extends Component{
 
     }
 
+
     render(){
 
         return(
@@ -61,7 +71,11 @@ class QueryForm extends Component{
                     <option value="nail_polish">Nail Polish</option>
                     </select>
 
-                    <div  className="slidecontainer">
+                    <div className="slider">
+                        <RangeSlider getMinMax={this.getMinMax} />
+                    </div>
+
+                    {/* <div  className="slidecontainer">
                         maxshit
                         <input id="maxPrice" onChange={this.handleChange} type="range" min="1" max="100"  class="slider" ></input>
                     </div>
@@ -69,7 +83,7 @@ class QueryForm extends Component{
                     <div className="slidecontainer">
                         minshit
                         <input id="minPrice" onChange={this.handleChange} type="range" min="1" max="100"  class="slider"></input>
-                    </div>
+                    </div> */}
                     <button onClick={this.handleSubmit}>fire</button>
                 </form>
             </div>
