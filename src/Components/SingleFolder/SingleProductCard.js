@@ -25,7 +25,7 @@ class SingleProductCard extends Component {
                             />
                             <img src={data.image_link} alt=""/>
                             <h2>{he.decode(data.name)}</h2>
-                            <h3>$ {data.price}</h3>
+                            <h3>$ {Math.ceil(data.price)}</h3>
                             <div className="colorPalette">
                                 <ColorPalette colorArray={data.product_colors}/>
                             </div>
