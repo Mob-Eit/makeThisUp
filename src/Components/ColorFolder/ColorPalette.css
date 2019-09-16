@@ -2,9 +2,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 25%;
-  overflow-y: hidden;
-  height: 30px;
 }
 
 .colorPalette ul li {

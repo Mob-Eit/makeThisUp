@@ -30,7 +30,7 @@ class SingleProductCard extends Component {
                                 favedItems={this.props.favedItems}
                             />
                             <h2>{he.decode(data.name)}</h2>
-                            <h3>$ {Math.ceil(data.price)}</h3>
+                            <h3>${Math.ceil(data.price)}</h3>
                             <div className="colorPalette">
                                 <ColorPalette colorArray={data.product_colors}/>
                             </div>
