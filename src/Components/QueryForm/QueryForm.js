@@ -84,9 +84,10 @@ class QueryForm extends Component{
                     </div>{/* filterContainer*/}
                     
 
-                    <button onClick={this.handleSubmit} className="searchButton">search</button>
-
-                    {this.state.attr ? <label htmlFor="type" className="filterErrorMessage">Please select a category</label>:true}
+                    <div className="buttonArea">
+                        <button onClick={this.handleSubmit} className="searchButton">search</button>
+                        {this.state.attr ? <label htmlFor="type" className="filterErrorMessage">Please select a category!</label>:true}
+                    </div>
 
                 </form>
             </div>/* formContainer wrapper */
@@ -95,4 +96,3 @@ class QueryForm extends Component{
 }
 
 export default QueryForm;
-
