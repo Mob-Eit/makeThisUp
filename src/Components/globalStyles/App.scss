@@ -20,20 +20,21 @@ body {
 }
 
 .titlePageContainer{
-    height:50vh;
-    padding-left:1.5rem;
     padding-top:2rem;
-    
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 90vh; 
 }
 
 .headerContainer{
     width:80%;
     position:relative;
-    max-width: 15rem;
+    max-width: 15rem; 
 }
 
 h1{
-    margin:0;
+    margin-left: 1rem;
     padding:.5rem;
     font-size:1.8rem;
     text-transform: uppercase;
@@ -58,6 +59,7 @@ h1{
 
 .titleP{
     margin-top:1rem;
+    margin-left: 1rem;
     font-size:.9rem;
     letter-spacing: .05rem;
 }
