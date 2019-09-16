@@ -54,6 +54,7 @@
     &:active {
         background: white;
         color: $primary; 
+        border: .15rem solid $accent;
     }
 }
 

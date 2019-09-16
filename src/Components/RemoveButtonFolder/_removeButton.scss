@@ -1,0 +1,13 @@
+.removeButton {
+    background: transparent;
+    border: none;
+    margin-top: .25rem;
+    &:hover,
+    &:focus {
+        transform:scale(1.3);
+        transition: transform 0.5s;
+    }
+    &:focus {
+        outline: dashed .01rem black;
+    }
+}
