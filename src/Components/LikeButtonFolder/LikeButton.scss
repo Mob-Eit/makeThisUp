@@ -1,0 +1,15 @@
+.liked, .like{
+    color:red;
+    background: #fff;
+    border: none;
+}
+
+.like:hover{
+    transform:scale(1.3);
+    transition: transform 0.5s;
+}
+
+.liked{
+    transform:scale(1.3);
+}
+

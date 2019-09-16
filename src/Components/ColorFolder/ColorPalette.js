@@ -26,8 +26,6 @@ function ColorPalette (props) {
         return unique.includes(item) ? unique : [...unique, item]
     }, []);
 
-    console.log(reducedArray);
-
     return(
         <ul>
             {reducedArray.map(color => {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SingleProductCard from '../SingleFolder/SingleProductCard';
+import './Results.scss';
 
 class Results extends Component {
     constructor(props) {
@@ -10,18 +11,18 @@ class Results extends Component {
     render() { 
         const {data} = this.props
         return (
-            <div className="resultsContainer">
-                {/* {this.renderCards(this.props.data)} */}
+            <section className="resultsContainer">
                 {data.map(element => {
                     return(
-                        <SingleProductCard 
+                        <SingleProductCard
+                            key={element.id} 
                             data={element}
                             isLiked={this.props.isLiked}
                             favedItems={this.props.favedItems}
                         />
                     )
                 })}
-            </div>
+            </section>
         );
     }
 }
