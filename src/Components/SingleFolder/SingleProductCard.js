@@ -30,16 +30,20 @@ class SingleProductCard extends Component {
                                 isLiked={this.props.isLiked}
                                 favedItems={this.props.favedItems}
                             /> */}
-                            <img 
-                                src={data.image_link} 
-                                onError={this.addDefaultSrc}
-                                alt=""
-                            />
-                            <LikeButton 
-                                data={data}
-                                isLiked={this.props.isLiked}
-                                favedItems={this.props.favedItems}
-                            />
+                            <div className="imageContainer">
+                                <img 
+                                    src={data.image_link} 
+                                    onError={this.addDefaultSrc}
+                                    alt=""
+                                />
+                                <div className="likeButtonContainer">
+                                    <LikeButton 
+                                        data={data}
+                                        isLiked={this.props.isLiked}
+                                        favedItems={this.props.favedItems}
+                                    />
+                                </div>
+                            </div>
                             <h2>{he.decode(data.name)}</h2>
                             <h3>${Math.ceil(data.price)}</h3>
                             <div className="colorPalette">

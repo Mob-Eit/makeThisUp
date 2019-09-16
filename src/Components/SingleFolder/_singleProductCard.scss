@@ -9,20 +9,22 @@ div.singleContainer {
     position: relative;
     h2{
         word-wrap: break-word;
+        padding-top: .7rem;
     }
     h3 {
         font-style: italic;
         font-size: .85rem;
     }
     img {
-        height: auto;
+        // height: auto;
+        max-height: 10rem;
     }
     div.likeButtonContainer {
         text-align: right;
         height: 0;
         button {
             position: relative;
-            top: 3rem;
+            bottom: -.2rem;
             right: 0rem;
         }
     }
