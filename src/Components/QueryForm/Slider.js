@@ -5,8 +5,13 @@ import Slider from '@material-ui/core/Slider';
 
 const useStyles = makeStyles({
     root: {
-    width: 300
+    width: 300,
+    
     },
+    slider:{
+        color:'black',
+        height: 0,
+    }
 });
 
 function valuetext(value) {
@@ -26,6 +31,7 @@ export default function RangeSlider(props) {
         <div className={classes.root}>
         
         <Slider
+            className={classes.slider}
             value={value}
             onChange={handleChange}
             valueLabelDisplay="auto"

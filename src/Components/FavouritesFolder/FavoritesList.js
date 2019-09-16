@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import firebase from "../FirebaseFolder/firebase";
 import RemoveButton from '../RemoveButtonFolder/RemoveButton';
+import he from 'he';
 
 class FavouritesList extends Component {
     constructor() {
@@ -40,8 +41,8 @@ class FavouritesList extends Component {
                     return(
                         <ul className="favouritesList">
                             <li><img src={item.itemDetails.image} alt="Product Image"/></li>
-                            <li>{item.itemDetails.name}</li>
-                            <li>{item.itemDetails.price}</li>
+                            <li>{he.decode(item.itemDetails.name)}</li>
+                            <li>{Math.ceil(item.itemDetails.price)}</li>
                             <RemoveButton 
                                 item={item.id}
                                 favedItems={this.props.favedItems}
