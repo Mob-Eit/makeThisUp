@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import QueryForm from './Components/QueryForm/QueryForm';
 import Results from './Components/ResultsFolder/Results';
-import './globalStyles/App.scss';
+import './Components/globalStyles/App.scss';
 import SwipeableTemporaryDrawer from './Components/Drawer/Drawer.js';
 import firebase from 'firebase';
 
