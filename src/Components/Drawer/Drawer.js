@@ -3,22 +3,29 @@ import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Button from '@material-ui/core/Button';
 import FavouritesList from '../FavouritesFolder/FavoritesList';
+import ListIcon from '@material-ui/icons/List';
 
 const useStyles = makeStyles({
 list: {
-    width: 250,
+    width: 300,
 },
 fullList: {
     width: 'auto',
 },
+listIcon: {
+    color: 'white',
+    border: '1px solid transparent',
+    transition: 'border .3s',
+    '&:hover':{
+        border: '1px solid white',
+    }
+},
+
 });
 
 export default function SwipeableTemporaryDrawer(props) {
 const classes = useStyles();
 const [state, setState] = React.useState({
-    // top: false,
-    // left: false,
-    // bottom: false,
     right: false,
 });
 
@@ -34,7 +41,7 @@ const sideList = side => (
     <div
     className={classes.list}
     role="presentation"
-    // THIS SHIT HERE IS TO OPEN AND CLOSE THE DRAWER
+    // THIS HERE IS TO OPEN AND CLOSE THE DRAWER
     // onClick={toggleDrawer(side, false)}
     onKeyDown={toggleDrawer(side, false)}
     >
@@ -48,7 +55,7 @@ const sideList = side => (
 return (
     <div>
   
-    <Button className="drawerButton" onClick={toggleDrawer('right', true)}>Open Right</Button>
+    <Button className="drawerButton" onClick={toggleDrawer('right', true)}><ListIcon className={classes.listIcon}></ListIcon></Button>
  
     <SwipeableDrawer
         anchor="right"
