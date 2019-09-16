@@ -18,12 +18,17 @@ class SingleProductCard extends Component {
                     <ul>
                         {/* we need to add a key for each li */}
                         <li>
+                            {/* <LikeButton 
+                                data={data}
+                                isLiked={this.props.isLiked}
+                                favedItems={this.props.favedItems}
+                            /> */}
+                            <img src={data.image_link} alt=""/>
                             <LikeButton 
                                 data={data}
                                 isLiked={this.props.isLiked}
                                 favedItems={this.props.favedItems}
                             />
-                            <img src={data.image_link} alt=""/>
                             <h2>{he.decode(data.name)}</h2>
                             <h3>$ {Math.ceil(data.price)}</h3>
                             <div className="colorPalette">

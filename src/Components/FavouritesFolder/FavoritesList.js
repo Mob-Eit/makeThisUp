@@ -46,7 +46,7 @@ class FavouritesList extends Component {
 
                             <li className="itemImage"><img src={item.itemDetails.image} alt="Product Image"/></li>
                             <li className="itemName">{he.decode(item.itemDetails.name)}</li>
-                            <li className="itemPrice">{Math.ceil(item.itemDetails.price)}</li>
+                            <li className="itemPrice"> ${Math.ceil(item.itemDetails.price)}</li>
 
                             <RemoveButton 
                                 item={item.id}

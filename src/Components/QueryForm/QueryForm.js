@@ -7,8 +7,8 @@ class QueryForm extends Component{
         super();
         this.state = {
             type: '',
-            maxPrice: '',
-            minPrice: '',
+            minPrice: '20',
+            maxPrice: '37',
             attr:false,
         }
     }
@@ -75,7 +75,7 @@ class QueryForm extends Component{
                         </div>{/* categoryFilter */}
 
                         <div className="priceFilter">
-                            <h2>Price</h2>
+                            <h2>Price: $ {this.state.minPrice} - {this.state.maxPrice}</h2>
                             <div className="slider">
                                 <RangeSlider getMinMax={this.getMinMax} />
                             </div>{/* slider */}

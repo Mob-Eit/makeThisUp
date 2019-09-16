@@ -14,7 +14,6 @@ class LikeButton extends Component {
 
     likeFirebase = () => {
         
-        console.log("clicking like");
         const dbRef= firebase.database().ref();
         const data = this.props.data
 
@@ -33,35 +32,36 @@ class LikeButton extends Component {
         })
 
     }
+    
     componentDidMount(){
-        this.props.favedItems.forEach(item => {
-            if (item === this.props.data.id){
-                console.log('is pressed');
-                this.setState({
-                    pressed:true,
-                })
-            }else{
-                this.setState({
-                    // pressed:false,
-                })
-            }
-        })
+        const found = this.props.favedItems.find(item => {
+            return item === this.props.data.id;
+        });
+        if (found) {
+            this.setState({
+                pressed: true,
+            })
+        }else{
+            this.setState({
+                pressed:false,
+            })
+        }
     }
 
     componentDidUpdate(prevProps){
         if (prevProps.favedItems !== this.props.favedItems ){
-            this.props.favedItems.forEach(item => {
-                if (item === this.props.data.id){
-                    console.log('is pressed');
-                    this.setState({
-                        pressed:true,
-                    })
-                }else{
-                    this.setState({
-                        // pressed:false,
-                    })
-                }
-            })
+            const found = this.props.favedItems.find(item => {
+                return item === this.props.data.id;
+            });
+            if (found) {
+                this.setState({
+                    pressed: true,
+                })
+            }else{
+                this.setState({
+                    pressed:false,
+                })
+            }
         }
     }
 
