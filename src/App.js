@@ -72,18 +72,32 @@ class App extends Component{
     
     return (
       <div className="App">
-        <QueryForm 
-          getData={this.getData}
-        />
-        <Results 
-          data={this.state.apiData}
-          isLiked={this.isLiked}
-          favedItems={this.state.favedItems}
-        />
-        <SwipeableTemporaryDrawer 
-          favedItems={this.state.favedItems}
-          isUnliked={this.isUnliked}
-        />
+        <header>
+          <div className="hamTopContainer">
+            <h3><span>M</span>ake<span>A</span>pp</h3>
+            <SwipeableTemporaryDrawer 
+              favedItems={this.state.favedItems}
+              isUnliked={this.isUnliked}
+            />
+          </div>
+          <div className="titlePageContainer">
+            <div className="headerContainer">
+              <h1><span>M</span>ake<span>A</span>pp</h1>
+            </div>
+            <p className="titleP">Search for a product that best suits you. </p>
+          </div>
+        </header>
+          <QueryForm 
+            getData={this.getData}
+          />
+          <Results 
+            data={this.state.apiData}
+            isLiked={this.isLiked}
+            favedItems={this.state.favedItems}
+          />
+        <footer>
+          <p>developed by Paul Andrews,Roman Ivashkevych, Kristen Zemlak and  Nicole Lavergne</p>
+        </footer>
       </div>
     );
   }

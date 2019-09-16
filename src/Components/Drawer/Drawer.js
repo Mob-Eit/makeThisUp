@@ -47,7 +47,9 @@ const sideList = side => (
 
 return (
     <div>
-    <Button onClick={toggleDrawer('right', true)}>Open Right</Button>
+  
+    <Button className="drawerButton" onClick={toggleDrawer('right', true)}>Open Right</Button>
+ 
     <SwipeableDrawer
         anchor="right"
         open={state.right}
