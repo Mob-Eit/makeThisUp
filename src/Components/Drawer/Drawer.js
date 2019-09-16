@@ -82,7 +82,7 @@ const sideList = side => (
 return (
     <div>
     {/* <Button onClick={toggleDrawer('left', true)}>Open Left</Button> */}
-    <Button onClick={toggleDrawer('right', true)}>Open Right</Button>
+    <Button className="drawerButton" onClick={toggleDrawer('right', true)}>Open Right</Button>
     {/* <Button onClick={toggleDrawer('top', true)}>Open Top</Button>
     <Button onClick={toggleDrawer('bottom', true)}>Open Bottom</Button> */}
     {/* <SwipeableDrawer
