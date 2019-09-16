@@ -4,9 +4,14 @@
     border: none;
 }
 
-.like:hover{
+.like:hover,
+.like:focus {
     transform:scale(1.3);
     transition: transform 0.5s;
+}
+
+.like:focus {
+    outline: dashed .01rem red;
 }
 
 .liked{
