@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import firebase from "../FirebaseFolder/firebase"
+import RemoveCircleOutline from '@material-ui/icons/RemoveCircleOutline';
+import './_removeButton.scss';
 
 class RemoveButton extends Component {
     constructor() {
@@ -21,7 +23,7 @@ class RemoveButton extends Component {
 
     render(props) {
         return(
-            <button onClick={()=> this.removeFirebase(this.props.item)}>Remove me!</button>
+            <button className="removeButton" onClick={()=> this.removeFirebase(this.props.item)}><RemoveCircleOutline></RemoveCircleOutline></button>
         )
     }
 }
