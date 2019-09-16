@@ -5,6 +5,8 @@ import Results from './Components/ResultsFolder/Results';
 import './Components/globalStyles/App.scss';
 import SwipeableTemporaryDrawer from './Components/Drawer/Drawer.js';
 import firebase from 'firebase';
+// import { StickyContainer, Sticky } from 'react-sticky';
+
 
 class App extends Component{
   constructor(){
@@ -72,14 +74,15 @@ class App extends Component{
     
     return (
       <div className="App">
-        <header>
           <div className="hamTopContainer">
             <h3><span>M</span>ake<span>A</span>pp</h3>
             <SwipeableTemporaryDrawer 
               favedItems={this.state.favedItems}
               isUnliked={this.isUnliked}
-            />
+              />
           </div>
+
+          {/* <StickyContainer> */}
           
           <div className="titlePageContainer">
             <div className="titleSubtitleContainer">
@@ -88,19 +91,21 @@ class App extends Component{
               </div>{/* headerContainer */}
               <p className="titleP">Search for a product that best suits you. </p>
             </div>{/* titleSubtitleContainer */}
-            <div className="queryFormContainer">
-              <QueryForm 
-              getData={this.getData}
-              />
-            </div>{/* queryFormContainer */}
+            {/* <Sticky> */}
+              <div className="queryFormContainer">
+                    <QueryForm 
+                    getData={this.getData}
+                    />
+              </div>{/* queryFormContainer */}
+            {/* </Sticky> */}
           </div>{/* titlePageContainer */}
 
-        </header>
           <Results 
             data={this.state.apiData}
             isLiked={this.isLiked}
             favedItems={this.state.favedItems}
-          />
+            />
+            {/* </StickyContainer> */}
         <footer>
           <p>developed by Paul Andrews,Roman Ivashkevych, Kristen Zemlak and  Nicole Lavergne</p>
         </footer>

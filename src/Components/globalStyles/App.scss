@@ -18,6 +18,9 @@ body {
     color:white;
     display:flex;
     justify-content: space-between;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 .titlePageContainer{
@@ -105,6 +108,8 @@ ul {
 
 footer{
     background:black;
+    position:sticky;
+    bottom:0;
 
     p{
         font-size:.5rem;
