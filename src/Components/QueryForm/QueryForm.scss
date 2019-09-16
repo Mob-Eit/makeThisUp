@@ -1,47 +1,49 @@
-// COLORS
-$light: #f1f0fc;
-$primary:  #6056f9;
-$accent: #cfff31;
-
-// FONTS
-$headerFont: 'Josefin Slab', serif;
-$baseFont: 'Lato', sans-serif;
+@import '../globalStyles/App.scss';
 
 .formContainer, 
 .slider, 
 .searchButton, 
 #type {
+    background: #f1f0fc;
     font-family: $baseFont;
-    border: 2px solid $primary; 
-    border-radius: 15px;
-    padding: 2rem;
-    p{
+    border: .15rem solid $primary; 
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    h2{
         color: $primary;
-        font-size: 2rem; 
+        margin: 0.5rem 0; 
     }
 }
 
-.searchButton, 
-#type {
-    font-size: 1rem; 
-    text-transform: uppercase;
-    width: 100%;
-    padding: 1rem;
+.filterContainer {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+    .priceFilter, 
+    .categoryFilter {
+        width: 48%; 
+    }
+    select {
+        width: 100%; 
+    }
 }
 
 .searchButton {
     background: $primary;
     color: white; 
-    margin: 2rem 0; 
+    text-transform: uppercase;
+    margin: 1rem auto; 
+    display: block; 
+    width: 300px;
     &:hover, 
     &:focus, 
     &:active {
-        border: 2px solid $primary; 
+        border: .15rem solid $primary; 
         background: $accent;
         color: $primary; 
     }
 }
 
-.categoryErrorMessage {
+.filterErrorMessage {
     color: red; 
 }

@@ -55,33 +55,41 @@ class QueryForm extends Component{
         return(
             <div className="formContainer wrapper">
                 <form action="">
+                    <div className="filterContainer">
 
-                    <p>Category</p>
-                    <select name="type" id='type' onChange={this.handleChange}>
-                        <option disabled selected value>Select a category</option>
-                        <option value="blush">Blush</option>
-                        <option value="bronzer">Bronzer</option>
-                        <option value="eyebrow">Eyebrow</option>
-                        <option value="eyeliner">Eyeliner</option>
-                        <option value="eyeshadow">Eyeshadow</option>
-                        <option value="foundation">Foundation</option>
-                        <option value="lip_liner">Lip Liner</option>
-                        <option value="lipstick">Lipstick</option>
-                        <option value="mascara">Mascara</option>
-                        <option value="nail_polish">Nail Polish</option>
-                        </select>
+                        <div className="categoryFilter">
+                            <h2>Category</h2>
+                            <select name="type" id='type' onChange={this.handleChange}>
+                                <option disabled selected value>Choose one</option>
+                                <option value="blush">Blush</option>
+                                <option value="bronzer">Bronzer</option>
+                                <option value="eyebrow">Eyebrow</option>
+                                <option value="eyeliner">Eyeliner</option>
+                                <option value="eyeshadow">Eyeshadow</option>
+                                <option value="foundation">Foundation</option>
+                                <option value="lip_liner">Lip Liner</option>
+                                <option value="lipstick">Lipstick</option>
+                                <option value="mascara">Mascara</option>
+                                <option value="nail_polish">Nail Polish</option>
+                                </select>
+                        </div>{/* categoryFilter */}
 
-                    <p>Price Range</p>
-                    <div className="slider">
-                        <RangeSlider getMinMax={this.getMinMax} />
-                    </div>
+                        <div className="priceFilter">
+                            <h2>Price</h2>
+                            <div className="slider">
+                                <RangeSlider getMinMax={this.getMinMax} />
+                            </div>{/* slider */}
+                        </div>{/* priceFilter */}
+
+                    </div>{/* filterContainer*/}
+                    
 
                     <button onClick={this.handleSubmit} className="searchButton">search</button>
 
-                    {this.state.attr ? <label htmlFor="type" className="categoryErrorMessage">Please select a category</label>:true}
+                    {this.state.attr ? <label htmlFor="type" className="filterErrorMessage">Please select a category</label>:true}
 
                 </form>
-            </div>
+            </div>/* formContainer wrapper */
         )
     }
 }
