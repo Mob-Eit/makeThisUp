@@ -12,7 +12,6 @@ body {
     font-family: $baseFont;
 }
 
-
 .hamTopContainer{
     background:black;
     color:white;
@@ -29,6 +28,7 @@ body {
 .headerContainer{
     width:80%;
     position:relative;
+    max-width: 15rem;
 }
 
 h1{

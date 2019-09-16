@@ -1,13 +1,16 @@
 section.favouritesContainer {
+    h2 {
+        letter-spacing: .15rem;
+        margin: 0;
+        padding: .5rem 0 .35rem .5rem;
+        border-bottom: 1px solid black;
+    }
     ul.favouritesList {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 1rem;
         border-bottom: .1rem solid #cfff31;
         padding-bottom: .5rem;
-        h2 {
-            font-size: 1.5rem;
-        }
         li {
             font-size: .75rem;
         }
