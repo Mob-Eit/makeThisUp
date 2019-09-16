@@ -1,0 +1,30 @@
+section.favouritesContainer {
+    ul.favouritesList {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        border-bottom: .1rem solid #cfff31;
+        padding-bottom: .5rem;
+        h2 {
+            font-size: 1.5rem;
+        }
+        li {
+            font-size: .75rem;
+        }
+        .itemImage {
+            width: 30%;
+        }
+        .itemName {
+            width: 50%;
+        }
+        .itemPrice {
+            width: 10%;
+        }
+        button {
+            width: 20%;
+        }
+    }
+    ul.favouritesList:last-child {
+        margin-bottom: 0;
+    }
+}

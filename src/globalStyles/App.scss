@@ -9,6 +9,7 @@ body {
     background:url("../images/marble.jpg");
     background-size: cover;
     margin: 0;
+    font-family: $baseFont;
 }
 
 
@@ -79,7 +80,7 @@ h2 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 img {
@@ -91,16 +92,6 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-p {
-    font-family: $baseFont;
-}
-
-.MuiButton-Label {
-    font-family: $baseFont;
-    color:white;
-    border:1px solid white;
 }
 
 .wrapper {

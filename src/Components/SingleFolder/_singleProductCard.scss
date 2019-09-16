@@ -1,22 +1,29 @@
 div.singleContainer {
-    width: 90%;
+    width: 93%;
     margin: 1rem auto 0;
     background: #f1f0fc;
     color: #6056f9;
-    border: .25rem solid #cfff31;
-    padding: 1.5rem;
+    border: .15rem solid #cfff31;
+    padding: .5rem;
     border-radius: .25rem;
     position: relative;
+    h2{
+        word-wrap: break-word;
+    }
     h3 {
         font-style: italic;
+        font-size: .85rem;
+    }
+    img {
+        height: auto;
     }
     div.likeButtonContainer {
         text-align: right;
         height: 0;
         button {
             position: relative;
-            top: 4rem;
-            right: .5rem;
+            top: 3rem;
+            right: 0rem;
         }
     }
 }
