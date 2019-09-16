@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ColorPalette from '../ColorFolder/ColorPalette';
 import LikeButton from '../LikeButtonFolder/LikeButton';
 import './_singleProductCard.scss';
+import he from 'he';
 
 class SingleProductCard extends Component {
     constructor(props) {
@@ -23,8 +24,8 @@ class SingleProductCard extends Component {
                                 favedItems={this.props.favedItems}
                             />
                             <img src={data.image_link} alt=""/>
-                            <h2>{data.name}</h2>
-                            <h3>${data.price}</h3>
+                            <h2>{he.decode(data.name)}</h2>
+                            <h3>$ {data.price}</h3>
                             <div className="colorPalette">
                                 <ColorPalette colorArray={data.product_colors}/>
                             </div>
