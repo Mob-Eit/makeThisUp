@@ -14,7 +14,8 @@ class Results extends Component {
             <section className="resultsContainer">
                 {data.map(element => {
                     return(
-                        <SingleProductCard 
+                        <SingleProductCard
+                            key={element.id} 
                             data={element}
                             isLiked={this.props.isLiked}
                             favedItems={this.props.favedItems}
