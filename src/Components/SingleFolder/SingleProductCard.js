@@ -7,8 +7,15 @@ import he from 'he';
 class SingleProductCard extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            imageStatus: '',
+        }
     }
+
+    addDefaultSrc(ev){
+        ev.target.src = 'http://www.sclance.com/pngs/image-placeholder-png/image_placeholder_png_698951.png'
+    }
+
     render() {
 
         const {data} = this.props
@@ -23,7 +30,11 @@ class SingleProductCard extends Component {
                                 isLiked={this.props.isLiked}
                                 favedItems={this.props.favedItems}
                             /> */}
-                            <img src={data.image_link} alt=""/>
+                            <img 
+                                src={data.image_link} 
+                                onError={this.addDefaultSrc}
+                                alt=""
+                            />
                             <LikeButton 
                                 data={data}
                                 isLiked={this.props.isLiked}
