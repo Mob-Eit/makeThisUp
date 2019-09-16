@@ -4,6 +4,7 @@ section.resultsContainer {
     display: grid;
     grid-template-columns: (50% 50%);
     grid-auto-rows: auto;
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 750px) {

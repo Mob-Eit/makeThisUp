@@ -25,11 +25,6 @@ class SingleProductCard extends Component {
                     <ul>
                         {/* we need to add a key for each li */}
                         <li>
-                            {/* <LikeButton 
-                                data={data}
-                                isLiked={this.props.isLiked}
-                                favedItems={this.props.favedItems}
-                            /> */}
                             <img 
                                 src={data.image_link} 
                                 onError={this.addDefaultSrc}
