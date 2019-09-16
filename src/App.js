@@ -80,16 +80,22 @@ class App extends Component{
               isUnliked={this.isUnliked}
             />
           </div>
+          
           <div className="titlePageContainer">
-            <div className="headerContainer">
-              <h1><span>M</span>ake<span>A</span>pp</h1>
-            </div>
-            <p className="titleP">Search for a product that best suits you. </p>
-          </div>
+            <div className="titleSubtitleContainer">
+              <div className="headerContainer">
+                <h1><span>M</span>ake<span>A</span>pp</h1>
+              </div>{/* headerContainer */}
+              <p className="titleP">Search for a product that best suits you. </p>
+            </div>{/* titleSubtitleContainer */}
+            <div className="queryFormContainer">
+              <QueryForm 
+              getData={this.getData}
+              />
+            </div>{/* queryFormContainer */}
+          </div>{/* titlePageContainer */}
+
         </header>
-          <QueryForm 
-            getData={this.getData}
-          />
           <Results 
             data={this.state.apiData}
             isLiked={this.isLiked}
