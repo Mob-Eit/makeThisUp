@@ -16,6 +16,7 @@
 
 .formContainer {
     background: rgba(96, 86, 249, 0.9);
+    padding-bottom: 1rem; 
 }
 
 .filterContainer {
@@ -33,6 +34,8 @@
 
 .buttonArea {
     margin: 0 auto;
+    text-align: center;
+    margin-top: .75rem;
 }
 
 .searchButton {
@@ -54,22 +57,33 @@
     }
 }
 
-.filterErrorMessage {
-    color: red; 
+label {
+    margin-top: 10px; 
 }
+
+.filterErrorMessage {
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    border-radius: .25rem;
+    align-self: center;
+    padding: .25rem;
+}
+
 
 @media (min-width:700px) {
     form {
         display: flex;
     }
-    
-    .buttonArea {
-        display: flex;
-        flex-direction: column;
-        .searchButton {
-            margin: 0;
-        }
+
+    .searchButton {
+    margin: 1rem; 
     }
-    
-    
+
+    // .filterErrorMessage {
+    //     background: rgba(255, 0, 0, 0.5);
+    //     color: white;
+    //     border-radius: .25rem;
+    //     align-self: center;
+    //     padding: .25rem;
+    // }
 }

@@ -83,10 +83,10 @@ class QueryForm extends Component{
 
                     </div>{/* filterContainer*/}
                     
+
                     <div className="buttonArea">
-                        {this.state.attr ? <label htmlFor="type" className="filterErrorMessage">Please select a category</label>:true}
-                        
                         <button onClick={this.handleSubmit} className="searchButton">search</button>
+                        {this.state.attr ? <label htmlFor="type" className="filterErrorMessage">Please select a category!</label>:true}
                     </div>
 
                 </form>
@@ -96,4 +96,3 @@ class QueryForm extends Component{
 }
 
 export default QueryForm;
-
