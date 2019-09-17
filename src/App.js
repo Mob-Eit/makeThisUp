@@ -66,7 +66,7 @@ class App extends Component{
   }
   
   getData = (params) =>{
-    const MAKEUP_API_URL = 'http://makeup-api.herokuapp.com/api/v1/products.json';
+    const MAKEUP_API_URL = 'https://makeup-api.herokuapp.com/api/v1/products.json';
     axios.get(MAKEUP_API_URL, params)
     .then( res =>{
         const apiData = res.data;
