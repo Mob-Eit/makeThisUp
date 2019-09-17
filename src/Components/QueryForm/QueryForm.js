@@ -51,7 +51,6 @@ class QueryForm extends Component{
 
     }
 
-
     render(){
 
         return(

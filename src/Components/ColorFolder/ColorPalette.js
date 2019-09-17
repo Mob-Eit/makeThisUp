@@ -21,14 +21,13 @@ function ColorPalette (props) {
     });
 
 
-    // This one here removes duplicates from the color data that STUPID API provides.
+    // This one here removes duplicates from the color data that  API provides.
     const reducedArray = convertedArray.reduce((unique, item) => {
         return unique.includes(item) ? unique : [...unique, item]
     }, []);
 
     return(
         <ul>
-            
             {reducedArray.map(color => {
                 const ColorBox = styled.div`
                     background:${color};
@@ -43,7 +42,6 @@ function ColorPalette (props) {
                     </li>
                 );
             })}
-            
         </ul>
     )
 }

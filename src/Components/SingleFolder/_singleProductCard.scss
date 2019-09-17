@@ -7,17 +7,20 @@ div.singleContainer {
     padding: .5rem;
     border-radius: .25rem;
     position: relative;
+
     h2{
         word-wrap: break-word;
         padding-top: .7rem;
         font-weight: bolder;
     }
+
     h3 {
         font-style: italic;
         font-size: .85rem;
         padding: 0;
         margin-bottom: .75rem;
     }
+
     h3:first-of-type{
         font-style: normal;
         font-size: 1rem;
@@ -27,6 +30,7 @@ div.singleContainer {
         color: black;
         box-shadow:.5px .5px #6056f9;
     }
+
     h3:nth-of-type(2){
         display: inline-block;
         padding: .5rem .25rem;
@@ -35,9 +39,11 @@ div.singleContainer {
         color: black;
         box-shadow:.5px .5px #6056f9;
     }
+
     img {
         max-height: 10rem;
     }
+
     div.likeButtonContainer {
         text-align: right;
         height: 0;
@@ -50,6 +56,7 @@ div.singleContainer {
 }
 
 @media (min-width: 750px) {
+    
     div.singleContainer h2 {
         font-size: 1.65rem;
     }
