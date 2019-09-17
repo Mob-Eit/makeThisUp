@@ -5,7 +5,7 @@
 .searchButton, 
 #type {
     background: #f1f0fc;
-    border: .1rem solid white; 
+    border: 0.5px solid black; 
     border-radius: .25rem;
     padding: 0 .5rem;
     h2{
@@ -17,7 +17,26 @@
 .formContainer {
     background: rgba(96, 86, 249, 0.9);
     padding-bottom: 1rem;  
+    
 }
+
+.formContainer.wrapper {
+    width: 96.5%;
+    margin-top: 1rem; 
+}
+
+@media (min-width:750px) {
+    .formContainer.wrapper {
+        width: 97.5%; 
+    }
+}
+
+@media (min-width:1100px) {
+    .formContainer.wrapper {
+        width: 98.5%; 
+    }
+}
+
 
 .filterContainer {
     display: flex; 
