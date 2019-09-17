@@ -110,6 +110,15 @@ ul {
     z-index: 2;
 }
 
+.loadingState {
+    margin: auto;
+    text-align: center;
+    width: 2%;
+    padding: .5rem 0;
+    height: 30rem;
+    padding-top: 15%;
+}
+
 footer{
     margin-top:1rem;
     background:black;
@@ -238,10 +247,5 @@ footer{
 
 }
 
-.loadingState {
-    margin: auto;
-    text-align: center;
-    width: 10%;
-    padding: .5rem 0;
-}
+
 

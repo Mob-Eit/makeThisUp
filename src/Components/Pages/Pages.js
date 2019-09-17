@@ -7,7 +7,6 @@ class Pages extends Component{
             <div className="pages">
             {this.props.matrix.map((page, index) => {
 
-                
                 return <button class={this.props.currentPage===index?'pressed':'pageButton'} onClick={() => {this.props.getPageNumber(index)}} key={index+1}>{index+1}</button>
 
             })}
