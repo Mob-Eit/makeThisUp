@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import SingleProductCard from '../SingleFolder/SingleProductCard';
 import './Results.scss';
+import Pages from '../Pages/Pages';
 
 class Results extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            oneDArray:[],
-            twoDArray:[],
+            oneDArray : [],
+            twoDArray : [],
+            currentPage: 0,
         }
     }
 
@@ -22,34 +24,51 @@ class Results extends Component {
                     k++;
                     matrix[k] = [];
                 }
-
                 matrix[k].push(list[i]);
             }
-
             return matrix;
         }
 
         const matrix = listToMatrix(dataClone, 5);
         this.setState({
             twoDArray:matrix,
+            numberOfPages:matrix.length,
         })
     }
 
+    getPageNumber = (pageNumber) =>{
+        this.setState({
+            currentPage:pageNumber,
+        });
+    }
+
     render() { 
-        const {data} = this.props
+        // const {data} = this.props
+        const newData = this.state.twoDArray[this.state.currentPage];
+        console.log(newData);
         return (
-            <section className="resultsContainer">
-                {data.map(element => {
-                    return(
-                        <SingleProductCard
-                            key={element.id} 
-                            data={element}
-                            isLiked={this.props.isLiked}
-                            favedItems={this.props.favedItems}
-                        />
-                    )
-                })}
-            </section>
+            this.state.twoDArray.length?
+            <main>
+                <Pages 
+                    matrix={this.state.twoDArray}
+                    currentPage={this.state.currentPage}
+                    getPageNumber={this.getPageNumber}
+                />
+                <section className="resultsContainer">
+                    {newData.map(element => {
+                        return(
+                            <SingleProductCard
+                                key={element.id} 
+                                data={element}
+                                isLiked={this.props.isLiked}
+                                favedItems={this.props.favedItems}
+                            />
+                        )
+                    })}  
+                </section>
+            </main>
+            :
+            true
         );
     }
 }

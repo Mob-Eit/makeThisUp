@@ -1,0 +1,20 @@
+.pages {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.pages button {
+  background: #fff;
+  border: 2px solid #6F66F9;
+  border-radius: 4px;
+  color: #6F66F9;
+  margin: 5px;
+  width: 40px;
+  padding: 0;
+}
+
+.pages button:hover, .pages button:focus {
+  background: #6F66F9;
+  color: #fff;
+}
+/*# sourceMappingURL=Pages.css.map */
