@@ -44,7 +44,7 @@ class FavouritesList extends Component {
                     return(
                         <ul className="favouritesList">
 
-                            <li className="itemImage"><img src={item.itemDetails.image} alt="Product Image"/></li>
+                            <li className="itemImage"><img src={item.itemDetails.image} alt={item.itemDetails.name + " Product Image"}/></li>
                             <li className="itemName">{he.decode(item.itemDetails.name)}</li>
                             <li className="itemPrice"> ${Math.ceil(item.itemDetails.price)}</li>
 

@@ -34,7 +34,7 @@ class SingleProductCard extends Component {
                                 <img 
                                     src={data.image_link} 
                                     onError={this.addDefaultSrc}
-                                    alt=""
+                                    alt={data.name + " product image"}
                                 />
                                 <div className="likeButtonContainer">
                                     <LikeButton 
