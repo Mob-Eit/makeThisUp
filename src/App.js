@@ -80,6 +80,23 @@ class App extends Component{
             confirmButtonColor:'#6056f9',
           })
         }
+    }).catch((error) => {
+      if (error.response) {
+        Swal.fire({
+          text: 'Error loading products. Try again soon!',
+          confirmButtonColor: '#6056f9',
+        });
+      } else if (error.request) {
+        Swal.fire({
+          text: 'Error loading products. Try again soon!',
+          confirmButtonColor: '#6056f9',
+        });
+      } else {
+        Swal.fire({
+          text: 'Error loading products. Try again soon!',
+          confirmButtonColor: '#6056f9',
+        });
+      }
     })
   }
 
