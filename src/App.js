@@ -5,7 +5,8 @@ import Results from './Components/ResultsFolder/Results';
 import './Components/globalStyles/App.scss';
 import SwipeableTemporaryDrawer from './Components/Drawer/Drawer.js';
 import firebase from 'firebase';
-// import { StickyContainer, Sticky } from 'react-sticky';
+import { StickyContainer, Sticky } from 'react-sticky';
+import zIndex from '@material-ui/core/styles/zIndex';
 
 
 class App extends Component{
@@ -81,9 +82,7 @@ class App extends Component{
               isUnliked={this.isUnliked}
               />
           </div>
-
-          {/* <StickyContainer> */}
-          
+          <StickyContainer>
           <div className="titlePageContainer">
             <div className="titleSubtitleContainer">
               <div className="headerContainer">
@@ -91,21 +90,27 @@ class App extends Component{
               </div>{/* headerContainer */}
               <p className="titleP">Search for a product that best suits you. </p>
             </div>{/* titleSubtitleContainer */}
-            {/* <Sticky> */}
-              <div className="queryFormContainer">
-                    <QueryForm 
-                    getData={this.getData}
-                    />
-              </div>{/* queryFormContainer */}
-            {/* </Sticky> */}
+  
+            <div className="adjustZ">
+              <Sticky topOffset={300}>
+                {({ style, isSticky }) =>
+                  <div style={{...style, marginTop: isSticky ? '40px' : '0px'}}>
+                    <div className="queryFormContainer">
+                          <QueryForm 
+                          getData={this.getData}
+                          />
+                    </div>{/* queryFormContainer */}
+                  </div>
+                }
+              </Sticky>
+            </div>
           </div>{/* titlePageContainer */}
-
           <Results 
             data={this.state.apiData}
             isLiked={this.isLiked}
             favedItems={this.state.favedItems}
             />
-            {/* </StickyContainer> */}
+            </StickyContainer>
         <footer>
           <p>developed by Paul Andrews,Roman Ivashkevych, Kristen Zemlak and  Nicole Lavergne</p>
         </footer>

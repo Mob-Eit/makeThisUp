@@ -185,8 +185,8 @@ html {
 
 body {
   background: url("../images/marble.jpg");
-  background-size: cover;
-  margin: 0;
+  background-repeat: repeat;
+  background-size: contain;
   font-family: "Lato", sans-serif;
 }
 
@@ -199,6 +199,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .titlePageContainer {
@@ -213,19 +217,19 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 90vh;
+  height: 85vh;
 }
 
 .headerContainer {
   width: 80%;
   position: relative;
-  max-width: 15rem;
+  max-width: 20rem;
 }
 
 h1 {
-  margin-left: 1rem;
+  margin-left: 2rem;
   padding: .5rem;
-  font-size: 1.8rem;
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
   background-color: rgba(207, 255, 49, 0.6);
@@ -233,7 +237,7 @@ h1 {
 }
 
 h1 span {
-  font-size: 2.5rem;
+  font-size: 4rem;
 }
 
 h1::after {
@@ -241,15 +245,15 @@ h1::after {
   width: 110%;
   height: 10%;
   position: absolute;
-  left: .5rem;
+  left: 1.5rem;
   bottom: 10%;
   background-color: rgba(96, 86, 249, 0.9);
 }
 
 .titleP {
   margin-top: 1rem;
-  margin-left: 1rem;
-  font-size: .9rem;
+  margin-left: 2rem;
+  font-size: 1.3rem;
   letter-spacing: .05rem;
 }
 
@@ -292,8 +296,15 @@ ul {
   max-width: 1800px;
 }
 
+.adjustZ {
+  z-index: 2;
+}
+
 footer {
   background: black;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
 }
 
 footer p {
