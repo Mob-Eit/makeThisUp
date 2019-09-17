@@ -111,6 +111,7 @@ ul {
 }
 
 footer{
+    margin-top:1rem;
     background:black;
     position:sticky;
     bottom:0;
@@ -129,7 +130,6 @@ footer{
 
 @media(min-width: 525px){
 
-
     .headerContainer{
         width:80%;
         max-width:25rem; 
@@ -139,10 +139,10 @@ footer{
     h1{
         margin-left:3rem;
         padding:1rem;
-        font-size:3rem;
+        font-size:2.5rem;
         letter-spacing: .2rem;
         span{
-            font-size:4rem;
+            font-size:3rem;
         }
 
     &::after{
@@ -155,7 +155,7 @@ footer{
 
     .titleP{
         margin-left: 3rem;
-        font-size:1.6rem;
+        font-size:1.3rem;
         letter-spacing: .05rem;
     }
 }
@@ -193,23 +193,18 @@ footer{
             left:3.5rem;
         }
     }
-}
+
     .titleP{
         margin:0 0 0 4rem;
         font-size:1.8rem;
         letter-spacing: .05rem;
     }
 
-    footer{
 
-    p{
-        font-size:1rem;
-        color:$light;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: .1rem;
+   footer p{
+        letter-spacing:.1rem;
         margin:0;
-        padding:.5rem;
+        padding:.5rem 0 .2rem 0;
     }
 }
 
