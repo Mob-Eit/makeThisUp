@@ -5,7 +5,34 @@ import './Results.scss';
 class Results extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = {
+            oneDArray:[],
+            twoDArray:[],
+        }
+    }
+
+    componentDidMount(){
+        const dataClone = [...this.props.data];
+
+        const listToMatrix = (list, elementsPerSubArray) => {
+            var matrix = [], i, k;
+
+            for (i = 0, k = -1; i < list.length; i++) {
+                if (i % elementsPerSubArray === 0) {
+                    k++;
+                    matrix[k] = [];
+                }
+
+                matrix[k].push(list[i]);
+            }
+
+            return matrix;
+        }
+
+        const matrix = listToMatrix(dataClone, 5);
+        this.setState({
+            twoDArray:matrix,
+        })
     }
 
     render() { 
