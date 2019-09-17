@@ -5,7 +5,9 @@ import Results from './Components/ResultsFolder/Results';
 import './Components/globalStyles/App.scss';
 import SwipeableTemporaryDrawer from './Components/Drawer/Drawer.js';
 import firebase from 'firebase';
-// import { StickyContainer, Sticky } from 'react-sticky';
+import Spinner from 'react-spinner-material';
+import { StickyContainer, Sticky } from 'react-sticky';
+import zIndex from '@material-ui/core/styles/zIndex';
 
 
 class App extends Component{
@@ -14,7 +16,7 @@ class App extends Component{
     this.state = {
       apiData:[],
       favedItems:[],
-
+      loading: false
     }
   }
 
@@ -56,6 +58,12 @@ class App extends Component{
       favedItems:filteredFavedItems,
     });
   }
+
+  changeLoadingState = () => {
+    this.setState({
+      loading: true
+    })
+  }
   
   getData = (params) =>{
     const MAKEUP_API_URL = 'http://makeup-api.herokuapp.com/api/v1/products.json';
@@ -63,7 +71,10 @@ class App extends Component{
     .then( res =>{
       console.log(res);
         const apiData = res.data;
-        this.setState({apiData});
+        this.setState({
+          apiData,
+          loading: false
+        });
         if (!res.data.length) {
           alert('check your price sliders')
         }
@@ -81,31 +92,46 @@ class App extends Component{
               isUnliked={this.isUnliked}
               />
           </div>
-
-          {/* <StickyContainer> */}
-          
-          <div className="titlePageContainer">
-            <div className="titleSubtitleContainer">
-              <div className="headerContainer">
-                <h1><span>M</span>ake<span>A</span>pp</h1>
-              </div>{/* headerContainer */}
-              <p className="titleP">Search for a product that best suits you. </p>
-            </div>{/* titleSubtitleContainer */}
-            {/* <Sticky> */}
-              <div className="queryFormContainer">
-                    <QueryForm 
-                    getData={this.getData}
-                    />
-              </div>{/* queryFormContainer */}
-            {/* </Sticky> */}
-          </div>{/* titlePageContainer */}
-
-          <Results 
-            data={this.state.apiData}
-            isLiked={this.isLiked}
-            favedItems={this.state.favedItems}
-            />
-            {/* </StickyContainer> */}
+          <StickyContainer>
+            <div className="titlePageContainer">
+              <div className="titleSubtitleContainer">
+                <div className="headerContainer">
+                  <h1><span>M</span>ake<span>A</span>pp</h1>
+                </div>{/* headerContainer */}
+                <p className="titleP">Search for a product that best suits you. </p>
+              </div>{/* titleSubtitleContainer */}
+              <div className="adjustZ">
+                <Sticky topOffset={300}>
+                  {({ style, isSticky }) =>
+                    <div style={{...style, marginTop: isSticky ? '40px' : '0px'}}>
+                      <div className="queryFormContainer">
+                            <QueryForm 
+                            getData={this.getData}
+                            changeLoadingState={this.changeLoadingState}
+                            />
+                      </div>{/* queryFormContainer */}
+                    </div>
+                  }
+                </Sticky>
+              </div>
+            </div>{/* titlePageContainer */}
+            
+            { this.state.loading == true ?
+            <div className="loadingState">
+              <Spinner
+              size={50}
+              spinnerColor={"#cfff31"}
+              spinnerWidth={5}
+              visible={true}
+              />
+            </div> :
+            <Results 
+              data={this.state.apiData}
+              isLiked={this.isLiked}
+              favedItems={this.state.favedItems}
+              />
+            }
+          </StickyContainer>
         <footer>
           <p>developed by Paul Andrews,Roman Ivashkevych, Kristen Zemlak and  Nicole Lavergne</p>
         </footer>

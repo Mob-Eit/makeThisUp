@@ -10,10 +10,28 @@ div.singleContainer {
     h2{
         word-wrap: break-word;
         padding-top: .7rem;
+        font-weight: bolder;
     }
     h3 {
         font-style: italic;
         font-size: .85rem;
+        padding: 0;
+        margin-bottom: .75rem;
+    }
+    h3:first-of-type{
+        font-style: normal;
+        font-size: 1rem;
+        text-transform: uppercase;
+        position: relative;
+        background-color: rgba(207, 255, 49, 0.6);
+        color: black;
+    }
+    h3:nth-of-type(2){
+        display: inline-block;
+        padding: .5rem .25rem;
+        background: #cfff31;
+        border-radius: 1rem;
+        color: black;
     }
     img {
         // height: auto;

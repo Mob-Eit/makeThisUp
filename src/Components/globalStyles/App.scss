@@ -70,9 +70,9 @@ h1{
 h3{
     margin:0;
     padding: .5rem 0 0 .5rem;
-    font-size:.8rem;
+    font-size: .8rem;
     text-transform: uppercase;
-    font-family:$headerFont;
+    font-family: $headerFont;
     letter-spacing: .15rem;
 
     span{
@@ -106,6 +106,10 @@ ul {
     max-width: 1800px;
 }
 
+.adjustZ{
+    z-index: 2;
+}
+
 footer{
     background:black;
     position:sticky;
@@ -121,6 +125,7 @@ footer{
         padding:.5rem;
     }
 }
+
 
 @media(min-width: 525px){
 
@@ -237,3 +242,11 @@ footer{
     }
 
 }
+
+.loadingState {
+    margin: auto;
+    text-align: center;
+    width: 10%;
+    padding: .5rem 0;
+}
+
