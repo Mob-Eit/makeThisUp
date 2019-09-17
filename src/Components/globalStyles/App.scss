@@ -113,8 +113,7 @@ ul {
 footer{
     margin-top:1rem;
     background:black;
-    position:sticky;
-    bottom:0;
+    padding:.5rem;
 
     p{
         font-size:.5rem;
@@ -123,7 +122,6 @@ footer{
         text-transform: uppercase;
         letter-spacing: .1rem;
         margin:0;
-        padding:.5rem;
     }
 }
 
@@ -205,7 +203,6 @@ footer{
    footer p{
         letter-spacing:.1rem;
         margin:0;
-        padding:.5rem 0 .2rem 0;
     }
 }
 
