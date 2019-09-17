@@ -37,7 +37,7 @@ function ColorPalette (props) {
                     border-radius:50%;
                 `
                 return(
-                    <li>
+                    <li key={color}>
                         <ColorBox className="colorBox"> </ColorBox>
                     </li>
                 );

@@ -24,6 +24,7 @@ class QueryForm extends Component{
         });
     }
 
+    // error handling for form
     handleSubmit = (event) =>{
         event.preventDefault();
 
@@ -60,8 +61,8 @@ class QueryForm extends Component{
 
                         <div className="categoryFilter">
                             <h2>Category</h2>
-                            <select name="type" id='type' onChange={this.handleChange}>
-                                <option disabled selected value>Choose one</option>
+                            <select name="type" id='type'defaultValue="Choose One" onChange={this.handleChange}>
+                                <option disabled value="Choose One">Choose one</option>
                                 <option value="blush">Blush</option>
                                 <option value="bronzer">Bronzer</option>
                                 <option value="eyebrow">Eyebrow</option>

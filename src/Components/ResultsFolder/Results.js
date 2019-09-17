@@ -7,7 +7,6 @@ class Results extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            oneDArray : [],
             twoDArray : [],
             currentPage: 0,
         }
@@ -17,6 +16,7 @@ class Results extends Component {
 
         const dataClone = [...this.props.data];
 
+        // this function converts a one dimensional array, into multiple arrays of a given length (5 product cards are shown)
         const listToMatrix = (list, elementsPerSubArray) => {
             let matrix = [], i, k;
 

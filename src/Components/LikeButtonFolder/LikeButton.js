@@ -12,6 +12,7 @@ class LikeButton extends Component {
         }
     }
 
+    // sends firebase the item info to be stored and then displayed
     likeFirebase = () => {
         
         const dbRef= firebase.database().ref();
@@ -32,7 +33,8 @@ class LikeButton extends Component {
         })
 
     }
-    
+
+    // this is what allows us to see what has been liked - through heart icon changing
     componentDidMount(){
         const found = this.props.favedItems.find(item => {
             return item === this.props.data.id;
@@ -48,6 +50,7 @@ class LikeButton extends Component {
         }
     }
 
+    // when we remove something from firebase - the heart icon is enabled to be liked again
     componentDidUpdate(prevProps){
         if (prevProps.favedItems !== this.props.favedItems ){
             const found = this.props.favedItems.find(item => {

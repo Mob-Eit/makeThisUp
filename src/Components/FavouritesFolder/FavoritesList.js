@@ -9,11 +9,17 @@ class FavouritesList extends Component {
     constructor() {
         super();
         this.state = {
-            storedFavourites: []
+            storedFavourites: [],
         }
     }
+    
+    _isMounted = false
 
+    // functions below are how firebase database is displayed on site in fav list
     componentDidMount() {
+
+        this._isMounted = true
+
         const dbRef = firebase.database().ref();
 
         dbRef.on('value', (response) => {
@@ -27,10 +33,16 @@ class FavouritesList extends Component {
                 });
             }
 
-            this.setState({
-                storedFavourites: pulledItems
-            })            
+            if(this._isMounted ){
+                this.setState({
+                    storedFavourites: pulledItems
+                })            
+            }
         })
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false
     }
 
     render() {
@@ -40,7 +52,7 @@ class FavouritesList extends Component {
                 <h2>Your Favourites</h2>
                 {this.state.storedFavourites.map((item) => {
                     return(
-                        <ul className="favouritesList">
+                        <ul key={item.itemDetails.name} className="favouritesList">
 
                             <li className="itemImage"><img src={item.itemDetails.image} alt={item.itemDetails.name + " Product Image"}/></li>
                             <li className="itemName">{he.decode(item.itemDetails.name)}</li>
