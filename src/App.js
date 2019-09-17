@@ -100,7 +100,7 @@ class App extends Component{
                 <p className="titleP">Search for a product that best suits you. </p>
               </div>{/* titleSubtitleContainer */}
               <div className="adjustZ">
-                <Sticky topOffset={370}>
+                <Sticky topOffset={500}>
                   {({ style, isSticky }) =>
                     <div style={{...style, marginTop: isSticky ? '40px' : '0px'}}>
                       <div className="queryFormContainer">
