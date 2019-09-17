@@ -1,9 +1,8 @@
 
 .colorPalette{
     display:flex;
-    // width:25%;
-    // overflow-y: hidden;
-    // height:30px;
+    height:62px;
+    overflow-y: scroll;
     ul{
         li{
             display: inline-block;

@@ -28,6 +28,7 @@ function ColorPalette (props) {
 
     return(
         <ul>
+            
             {reducedArray.map(color => {
                 const ColorBox = styled.div`
                     background:${color};
