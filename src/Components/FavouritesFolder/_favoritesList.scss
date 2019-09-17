@@ -31,15 +31,16 @@ section.favouritesContainer {
         margin-bottom: 0;
     }
 }
-
-@media(min-width: 900px){
-
+@media (min-width: 900px) {
+    //drawer button and remove button in list sizing below
+    svg.MuiSvgIcon-root {
+        font-size: 2.25rem;
+    }
     section.favouritesContainer {
         h2 {
             font-size: 1.3rem; 
             padding: .85rem 0 .4rem .5rem;
         }
-
         ul.favouritesList li {
             font-size: 1rem;
         }
