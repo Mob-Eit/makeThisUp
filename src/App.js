@@ -7,6 +7,7 @@ import SwipeableTemporaryDrawer from './Components/Drawer/Drawer.js';
 import firebase from 'firebase';
 import Spinner from 'react-spinner-material';
 import { StickyContainer, Sticky } from 'react-sticky';
+import Swal from 'sweetalert2'
 
 
 class App extends Component{
@@ -68,14 +69,16 @@ class App extends Component{
     const MAKEUP_API_URL = 'http://makeup-api.herokuapp.com/api/v1/products.json';
     axios.get(MAKEUP_API_URL, params)
     .then( res =>{
-      console.log(res);
         const apiData = res.data;
         this.setState({
           apiData,
           loading: false
         });
         if (!res.data.length) {
-          alert('check your price sliders')
+          Swal.fire({
+            text:'No item found, please update price range!',
+            confirmButtonColor:'#6056f9',
+          })
         }
     })
   }

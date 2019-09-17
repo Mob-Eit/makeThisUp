@@ -12,6 +12,7 @@ class SingleProductCard extends Component {
         }
     }
 
+    // this is a function that is added to place image source if image link fails to load
     addDefaultSrc(ev){
         ev.target.src = 'http://www.sclance.com/pngs/image-placeholder-png/image_placeholder_png_698951.png'
     }

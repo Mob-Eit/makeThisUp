@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RangeSlider from './Slider.js'
 import './QueryForm.scss';
+import Swal from 'sweetalert2';
 
 class QueryForm extends Component{
     constructor(){
@@ -24,11 +25,16 @@ class QueryForm extends Component{
         });
     }
 
+    // error handling for form
     handleSubmit = (event) =>{
         event.preventDefault();
 
         if(!this.state.type){
             
+            Swal.fire({
+                text: 'Please select a category!',
+                confirmButtonColor: '#6056f9',
+            })
 
             this.setState({
                 attr:true
@@ -42,8 +48,10 @@ class QueryForm extends Component{
             }};
             this.props.getData(params);
             
+
             this.setState({
-                attr:false
+                attr:false,
+                
             })
 
             this.props.changeLoadingState();
@@ -60,8 +68,8 @@ class QueryForm extends Component{
 
                         <div className="categoryFilter">
                             <h2>Category</h2>
-                            <select name="type" id='type' onChange={this.handleChange}>
-                                <option disabled selected value>Choose one</option>
+                            <select name="type" id='type'defaultValue="Choose One" onChange={this.handleChange}>
+                                <option disabled value="Choose One">Choose one</option>
                                 <option value="blush">Blush</option>
                                 <option value="bronzer">Bronzer</option>
                                 <option value="eyebrow">Eyebrow</option>
@@ -81,13 +89,10 @@ class QueryForm extends Component{
                                 <RangeSlider getMinMax={this.getMinMax} />
                             </div>{/* slider */}
                         </div>{/* priceFilter */}
-
                     </div>{/* filterContainer*/}
-                    
 
                     <div className="buttonArea">
                         <button onClick={this.handleSubmit} className="searchButton">search</button>
-                        {this.state.attr ? <label htmlFor="type" className="filterErrorMessage">Please select a category!</label>:true}
                     </div>
 
                 </form>

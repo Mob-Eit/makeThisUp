@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import FavouritesList from '../FavouritesFolder/FavoritesList';
 import ListIcon from '@material-ui/icons/List';
 
+// material plug-in code for drawer 
 const useStyles = makeStyles({
 list: {
     width: 300,
@@ -53,7 +54,7 @@ export default function SwipeableTemporaryDrawer(props) {
 
     return (
         <div>
-    
+
             <Button className="drawerButton" onClick={toggleDrawer('right', true)}><ListIcon className={classes.listIcon}></ListIcon></Button>
         
             <SwipeableDrawer
