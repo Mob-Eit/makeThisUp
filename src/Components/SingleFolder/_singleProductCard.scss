@@ -23,8 +23,9 @@ div.singleContainer {
         font-size: 1rem;
         text-transform: uppercase;
         position: relative;
-        background-color: rgba(207, 255, 49, 0.6);
+        background-color: rgba(207, 255, 49, 0.8);
         color: black;
+        box-shadow:.5px .5px #6056f9;
     }
     h3:nth-of-type(2){
         display: inline-block;
@@ -32,9 +33,9 @@ div.singleContainer {
         background: #cfff31;
         border-radius: 1rem;
         color: black;
+        box-shadow:.5px .5px #6056f9;
     }
     img {
-        // height: auto;
         max-height: 10rem;
     }
     div.likeButtonContainer {
