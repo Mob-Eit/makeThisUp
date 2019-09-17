@@ -7,7 +7,6 @@ import SwipeableTemporaryDrawer from './Components/Drawer/Drawer.js';
 import firebase from 'firebase';
 import Spinner from 'react-spinner-material';
 import { StickyContainer, Sticky } from 'react-sticky';
-import zIndex from '@material-ui/core/styles/zIndex';
 
 
 class App extends Component{
@@ -116,7 +115,7 @@ class App extends Component{
               </div>
             </div>{/* titlePageContainer */}
             
-            { this.state.loading == true ?
+            { this.state.loading === true ?
             <div className="loadingState">
               <Spinner
               size={50}

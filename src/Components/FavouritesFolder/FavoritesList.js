@@ -21,8 +21,6 @@ class FavouritesList extends Component {
 
             const data = response.val();
 
-            console.log(data);
-
             for (let key in data) {
                 pulledItems.push({
                     itemDetails: data[key], id: key

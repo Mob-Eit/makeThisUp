@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AACA,AAAA,aAAa,CAAA;EACT,OAAO,EAAC,IAAI;EACZ,MAAM,EAAC,IAAI;EACX,UAAU,EAAE,MAAM;CAOrB;;AAVD,AAKQ,aALK,CAIT,EAAE,CACE,EAAE,CAAA;EACE,OAAO,EAAE,YAAY;EACrB,MAAM,EAAC,GAAG;CACb",
-    "sources": [
-        "ColorPalette.scss"
-    ],
-    "names": [],
-    "file": "ColorPalette.css"
-}

@@ -14,10 +14,11 @@ class Results extends Component {
     }
 
     componentDidMount(){
+
         const dataClone = [...this.props.data];
 
         const listToMatrix = (list, elementsPerSubArray) => {
-            var matrix = [], i, k;
+            let matrix = [], i, k;
 
             for (i = 0, k = -1; i < list.length; i++) {
                 if (i % elementsPerSubArray === 0) {
@@ -30,6 +31,7 @@ class Results extends Component {
         }
 
         const matrix = listToMatrix(dataClone, 5);
+
         this.setState({
             twoDArray:matrix,
             numberOfPages:matrix.length,
@@ -43,9 +45,7 @@ class Results extends Component {
     }
 
     render() { 
-        // const {data} = this.props
         const newData = this.state.twoDArray[this.state.currentPage];
-        console.log(newData);
         return (
             this.state.twoDArray.length?
             <main>
@@ -67,8 +67,7 @@ class Results extends Component {
                     })}  
                 </section>
             </main>
-            :
-            true
+            :true
         );
     }
 }
