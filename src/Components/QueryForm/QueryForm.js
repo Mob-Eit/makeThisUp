@@ -45,6 +45,8 @@ class QueryForm extends Component{
             this.setState({
                 attr:false
             })
+
+            this.props.changeLoadingState();
         }
 
     }
