@@ -9,7 +9,6 @@ body {
     background:url("../images/marble.jpg");
     background-repeat: repeat;
     background-size:contain;
-    // margin: 0;
     font-family: $baseFont;
 }
 
@@ -32,26 +31,26 @@ body {
 }
 
 .headerContainer{
-    width:80%;
+    width:70%;
     position:relative;
-    max-width: 20rem; 
+    margin-top:5rem;
 }
 
 h1{
-    margin-left: 2rem;
+    margin-left: 1rem;
     padding:.5rem;
-    font-size:3rem;
+    font-size:1.5rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
     background-color:rgba(207, 255, 49, 0.6);
     border-radius: .15rem;
     span{
-        font-size:4rem;
+        font-size:2.5rem;
     }
 
     &::after{
             content:"";
-            width:110%;
+            width:100%;
             height:10%;
             position: absolute;
             left:1.5rem;
@@ -61,11 +60,12 @@ h1{
     }
 
 .titleP{
-    margin-top:1rem;
-    margin-left: 2rem;
-    font-size:1.3rem;
-    letter-spacing: .05rem;
+    width:75%;
+    margin:1rem 0 0 1rem;
+    font-size:1rem;
+    letter-spacing:.03rem;
 }
+
     
 h3{
     margin:0;
@@ -120,4 +120,120 @@ footer{
         margin:0;
         padding:.5rem;
     }
+}
+
+@media(min-width: 525px){
+
+
+    .headerContainer{
+        width:80%;
+        max-width:25rem; 
+        margin-top:5rem;
+    }   
+
+    h1{
+        margin-left:3rem;
+        padding:1rem;
+        font-size:3rem;
+        letter-spacing: .2rem;
+        span{
+            font-size:4rem;
+        }
+
+    &::after{
+            content:"";
+            width:100%;
+            height:10%;
+            left:2.5rem;
+        }
+    }
+
+    .titleP{
+        margin-left: 3rem;
+        font-size:1.6rem;
+        letter-spacing: .05rem;
+    }
+}
+
+@media(min-width: 900px){
+
+    h3{
+    margin:0;
+    padding: .5rem 0 0 .5rem;
+    font-size:1.5rem;
+    letter-spacing: .2rem;
+
+        span{
+        font-size:2rem;  
+        }
+    }
+
+    .headerContainer{
+        width:90%;
+        max-width:30rem; 
+    }   
+
+    h1{
+        margin:0 0 .8rem 4rem;
+        padding:1.5rem;
+        font-size:4rem;
+        letter-spacing: .3rem;
+        span{
+            font-size:5rem;
+        }
+
+    &::after{
+            content:"";
+            width:100%;
+            left:3.5rem;
+        }
+    }
+}
+    .titleP{
+        margin:0 0 0 4rem;
+        font-size:1.8rem;
+        letter-spacing: .05rem;
+    }
+
+    footer{
+
+    p{
+        font-size:1rem;
+        color:$light;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        margin:0;
+        padding:.5rem;
+    }
+}
+
+@media(min-width: 1200px){
+    .headerContainer{
+        width:95%;
+        max-width:40rem; 
+    }   
+
+    h1{
+        margin:0 0 .8rem 4rem;
+        padding:1.8rem;
+        font-size:6rem;
+        letter-spacing: .4rem;
+        span{
+            font-size:7rem;
+        }
+
+    &::after{
+            content:"";
+            width:100%;
+            left:3.5rem;
+        }
+    }
+
+    .titleP{
+        margin:0 0 0 4rem;
+        font-size:2rem;
+        letter-spacing: .4rem;
+    }
+
 }
