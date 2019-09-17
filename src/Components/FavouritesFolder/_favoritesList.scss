@@ -32,8 +32,16 @@ section.favouritesContainer {
     }
 }
 
+@media(min-width: 900px){
 
+    section.favouritesContainer {
+        h2 {
+            font-size: 1.3rem; 
+            padding: .85rem 0 .4rem .5rem;
+        }
 
-
-
-
+        ul.favouritesList li {
+            font-size: 1rem;
+        }
+    }
+}
