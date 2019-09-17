@@ -47,3 +47,17 @@ div.singleContainer {
         }
     }
 }
+
+@media (min-width: 750px) {
+    div.singleContainer h2 {
+        font-size: 1.65rem;
+    }
+    
+    div.singleContainer h3 {
+        font-size: 1.15rem;
+    }
+
+    div.singleContainer h3:first-of-type {
+        font-size: 1.35rem;
+    }
+}
